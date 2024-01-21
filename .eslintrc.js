@@ -4,13 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    "eslint:recommended",
-    // Uncomment the next line if you're using React
-    // 'plugin:react/recommended',
-    // Add 'prettier' last in the array to override other configs
-    "prettier",
-  ],
+  extends: ["eslint:recommended", "prettier", "plugin:storybook/recommended"],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: "module",
