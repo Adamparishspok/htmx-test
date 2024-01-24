@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head> </head>
   <body>
     <link href="styles.css" rel="stylesheet" />
@@ -50,37 +50,6 @@
       </div>
     </div>
 
-    <!-- Script Tag -->
-    <script src="/main.js"></script>
-
-    <script>
-      function sendTestEvent() {
-        posthog.capture('test_event', {
-          property1: 'value1',
-          property2: 'value2'
-        })
-      }
-
-      document
-        .getElementById('login-form')
-        .addEventListener('submit', async function (event) {
-          event.preventDefault()
-          const email = this.my.email
-          const password = this.my.password
-
-          try {
-            const { user, session, error } = await supabase.auth.signIn({
-              email: email,
-              password: password
-            })
-
-            if (error) throw error
-            alert('Login successful!')
-            // Redirect or update UI as needed
-          } catch (error) {
-            alert(error.error_description || error.message)
-          }
-        })
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
